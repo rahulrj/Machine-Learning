@@ -19,5 +19,5 @@ Let's go over them one by one
  -  The SVMs gives a good generalization performance even in case of high-dimensional data and a small set of training patterns.
 
 **Disadvantages of SVM**
-- SVMs don't work well with large datasets because the time complexity of training them is of the order of O(N^3).
+- SVMs don't work well with large datasets because the time complexity of training them is of the order of O(N^3).From a practical point of view this is the most serious problem of the SVMs is the high algorithmic complexity and extensive memory requirements of the required quadratic programming in large-scale tasks.
 - Also they don't work when the data contains a lot of noise and the classes are overalpping to each other.
