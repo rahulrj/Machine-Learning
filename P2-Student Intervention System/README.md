@@ -17,6 +17,6 @@ Let's go over them one by one
  - SVMs do a great job in formulating non-linear decesion boundaries. Other supervised learning methods like Decesion Trees and Logistic regression won't give optimised results when the data is randomly distributed and there is no clear linear separation between them.
  -  By introducing the kernel, SVMs gain flexibility in the choice of the form of the threshold separating the different types of data. We can also write our custom kernels to specify the similarity between the data. This feature of writing custom kernels makes it very versatile.
  -  The SVMs gives a good generalization performance even in case of high-dimensional data and a small set of training patterns.
- 
- **Disadvantages of SVM**
+
+**Disadvantages of SVM**
 
