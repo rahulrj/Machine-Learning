@@ -21,3 +21,11 @@ Let's go over them one by one
 **Disadvantages of SVM**
 - SVMs don't work well with large datasets because the time complexity of training them is of the order of O(N^3).From a practical point of view this is the most serious problem of the SVMs is the high algorithmic complexity and extensive memory requirements of the required quadratic programming in large-scale tasks.
 - Also they don't work when the data contains a lot of noise and the classes are overalpping to each other.
+
+
+**Why choose this model?**  
+TO BE DONE
+
+### Gaussian Naive Bayes
+
+
