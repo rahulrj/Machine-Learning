@@ -46,3 +46,6 @@ TO BE DONE
 - Naive Bayes assumes that the affect of an attribute value on a given class is independent of the value of other attributes.
 
 
+**Why choose this model**  
+TO BE DONE
+
