@@ -31,11 +31,14 @@ TO BE DONE
 - Document Classification.remains a popular (baseline) method for text categorization
 - Spam filtering. the problem of judging documents as belonging to one category or the other such as spam or legitimate
 - It also finds application in automatic medical diagnosis
+- credit approval
+- Recommender system that predicts wheteher the user will like a given resource
 
 
 **Advantages of Naive Bayes**  
 - They require a small amount of training data to estimate the necessary parameters.
 - Naive Bayes learners and classifiers can be extremely fast compared to more sophisticated methods.The decoupling of the class conditional feature distributions means that each distribution can be independently estimated as a one dimensional distribution. This in turn helps to alleviate problems stemming from the curse of dimensionality.
+- Naive Bayes classifiers are highly scalable, requiring a number of parameters linear in the number of variables (features/predictors) in a learning problem
 
 **Disadvantages of Naive Bayes**  
 - apparently over-simplified assumptions
