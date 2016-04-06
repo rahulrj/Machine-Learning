@@ -27,7 +27,10 @@ Let's go over them one by one
 TO BE DONE
 
 ### Gaussian Naive Bayes  
-Document Classification,Spam filtering
+**Applications of SVM**
+- Document Classification.remains a popular (baseline) method for text categorization
+- Spam filtering. the problem of judging documents as belonging to one category or the other such as spam or legitimate
+- It also finds application in automatic medical diagnosis
 
 
 **Advantages of Naive Bayes**  
@@ -36,5 +39,6 @@ Document Classification,Spam filtering
 
 **Disadvantages of Naive Bayes**  
 - apparently over-simplified assumptions
+- On the flip side, although naive Bayes is known as a decent classifier, it is known to be a bad estimator, so the probability outputs are not to be taken too seriously.
 
 
