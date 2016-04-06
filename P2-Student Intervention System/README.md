@@ -26,6 +26,15 @@ Let's go over them one by one
 **Why choose this model?**  
 TO BE DONE
 
-### Gaussian Naive Bayes
+### Gaussian Naive Bayes  
+Document Classification,Spam filtering
+
+
+**Advantages of Naive Bayes**  
+- They require a small amount of training data to estimate the necessary parameters.
+- Naive Bayes learners and classifiers can be extremely fast compared to more sophisticated methods.The decoupling of the class conditional feature distributions means that each distribution can be independently estimated as a one dimensional distribution. This in turn helps to alleviate problems stemming from the curse of dimensionality.
+
+**Disadvantages of Naive Bayes**  
+- apparently over-simplified assumptions
 
 
