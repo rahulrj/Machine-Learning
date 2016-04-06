@@ -58,3 +58,18 @@ TO BE DONE
 - It can be used as an "instant physician" trained an autoassociative memory neural network to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment.
 
 
+**Advantages of Neural networks**  
+- neuralnetworks can do a good job of generalization particularly on functions in which the interactions between inputs are not too intricate, and for which the output varies smoothly with the input.
+- Parallel organization permits solutions to  problems where multiple constraints must be satisfied simultaneously
+
+**Disadvantages of Neural networks**  
+- Neural networks are clearly an attribute-based representation, and do not have the expressive power of general logical representations.
+- MLP requires tuning a large number of hyperparameters.The solution quality of an ANN is known to be affected by the number of layers, the number of neurons at each layer, the transfer function of each neuron, and the size of the training set.
+- For non trivial problems, you generally need a very large network which can be extraordinarily time intensive to evaluate at inference time. This makes them expensive for production uses.
+
+**Why choose this model**  
+TO BE DONE
+
+
+
+
