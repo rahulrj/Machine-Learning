@@ -43,5 +43,6 @@ TO BE DONE
 **Disadvantages of Naive Bayes**  
 - apparently over-simplified assumptions
 - On the flip side, although naive Bayes is known as a decent classifier, it is known to be a bad estimator, so the probability outputs are not to be taken too seriously.
+- Naive Bayes assumes that the affect of an attribute value on a given class is independent of the value of other attributes.
 
 
