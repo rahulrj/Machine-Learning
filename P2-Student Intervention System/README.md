@@ -26,6 +26,14 @@ Let's go over them one by one
 **Why choose this model?**  
 TO BE DONE
 
+**Measurements from SVM**
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 ### Gaussian Naive Bayes  
 **Applications of SVM**
 - Document Classification.remains a popular (baseline) method for text categorization
