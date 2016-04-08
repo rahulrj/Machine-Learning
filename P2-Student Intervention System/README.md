@@ -69,19 +69,14 @@ TO BE DONE
 
 ### Random Forest Classifier
 **Applications of Random Forest Classifier**
-- Neural networks can receive and process vast amounts of information at once, making them useful in image compression.
-- In stock market business,many factors weigh in whether a given stock will go up or down on any given day. Since neural networks can examine a lot of information quickly and sort it all out, they can be used to predict stock prices.
-- The idea of using feedforward networks to recognize handwritten characters is rather straightforward. As in most supervised training, the bitmap pattern of the handwritten character is treated as an input, with the correct letter or digit as the desired output
-- Neural Networks are used experimentally to model the human cardiovascular system. Diagnosis can be achieved by building a model of the cardiovascular system of an individual and comparing it with the real time physiological measurements taken from the patient.potential harmful medical conditions can be detected at an early stage 
-- It can be used as an "instant physician" trained an autoassociative memory neural network to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment.
-
 
 **Advantages of Random Forest Classifier**  
 - Random forest runtimes are quite fast, and they are able to deal with unbalanced and missing data
 - Random decision forests correct for decision trees' habit of overfitting to their training set.
 - Lastly, the ability of automatically producing accuracy and variable importance and information about outliers makes random forests easier to use effectively
 - The other main advantage is that, because of how they are constructed (using bagging or boosting) these algorithms handle very well high dimensional spaces as well as large number of training examples.
-- random forests is not very sensitive to the parameters used to run it and it is easy to determine which parameters to use 
+- random forests is not very sensitive to the parameters used to run it and it is easy to determine which parameters to use
+- It gives estimates of what variables are important in the classification.
 
 
 **Disadvantages of Random Forest Classifier**  
