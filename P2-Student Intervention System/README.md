@@ -77,13 +77,17 @@ TO BE DONE
 
 
 **Advantages of Random Forest Classifier**  
-- neuralnetworks can do a good job of generalization particularly on functions in which the interactions between inputs are not too intricate, and for which the output varies smoothly with the input.
-- Parallel organization permits solutions to  problems where multiple constraints must be satisfied simultaneously
+- Random forest runtimes are quite fast, and they are able to deal with unbalanced and missing data
+- Random decision forests correct for decision trees' habit of overfitting to their training set.
+- Lastly, the ability of automatically producing accuracy and variable importance and information about outliers makes random forests easier to use effectively
+- The other main advantage is that, because of how they are constructed (using bagging or boosting) these algorithms handle very well high dimensional spaces as well as large number of training examples.
+- random forests is not very sensitive to the parameters used to run it and it is easy to determine which parameters to use 
+
 
 **Disadvantages of Random Forest Classifier**  
-- Neural networks are clearly an attribute-based representation, and do not have the expressive power of general logical representations.
-- MLP requires tuning a large number of hyperparameters.The solution quality of an ANN is known to be affected by the number of layers, the number of neurons at each layer, the transfer function of each neuron, and the size of the training set.
-- For non trivial problems, you generally need a very large network which can be extraordinarily time intensive to evaluate at inference time. This makes them expensive for production uses.
+- when used for regression they cannot predict beyond the range in the training data, and that they may over-fit data sets that are particularly noisy
+- Another issue related to regression is that random forests tends to overestimate the low values and underestimate the high values. This is because the response from random forests in the case of regression is the average (mean) of all of the trees.
+- a large number of trees may make the algorithm slow for real-time prediction
 
 **Why choose this model**  
 TO BE DONE
