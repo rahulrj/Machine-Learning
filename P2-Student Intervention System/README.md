@@ -69,6 +69,9 @@ TO BE DONE
 
 ### Random Forest Classifier
 **Applications of Random Forest Classifier**
+-Binomial Option Pricing- One of the most basic fundamental applications of decision tree analysis is for the purpose of option pricing. The binomial option pricing model uses discrete probabilities to determine the value of an option at expiration
+- It can be used as an "instant physician" trained an autoassociative memory neural network to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment
+- In stock market business,many factors weigh in whether a given stock will go up or down on any given day
 
 **Advantages of Random Forest Classifier**  
 - Random forest runtimes are quite fast, and they are able to deal with unbalanced and missing data
