@@ -26,6 +26,14 @@ Let's go over them one by one
 **Why choose this model?**  
 TO BE DONE
 
+**Measurements from SVM**
+
+| Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
+| -------------       |:-------------:         | -----:               | ------:       | ------:   |
+| 100                 | 0.002                  | 0.001                |  0.886        | 0.785     |
+| 200                 | 0.004                  | 0.003                |  0.88         | 0.792     |
+| 296                 | 0.007                  | 0.007                |  0.883        | 0.805     |
+
 ### Gaussian Naive Bayes  
 **Applications of SVM**
 - Document Classification.remains a popular (baseline) method for text categorization
