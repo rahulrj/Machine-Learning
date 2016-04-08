@@ -57,8 +57,18 @@ TO BE DONE
 **Why choose this model**  
 TO BE DONE
 
-### Neural networks
-**Applications of Neural networks**
+
+**Measurements from Gaussian NB**  
+
+| Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
+| -------------       |:-------------:         | -----:               | ------:       | ------:   |
+| 100                 | 0.002                  | 0.001                |  0.352        | 0.179     |
+| 200                 | 0.001                  | 0.001                |  0.793        | 0.729     |
+| 296                 | 0.001                  | 0.001                |  0.818        | 0.789     |
+
+
+### Random Forest Classifier
+**Applications of Random Forest Classifier**
 - Neural networks can receive and process vast amounts of information at once, making them useful in image compression.
 - In stock market business,many factors weigh in whether a given stock will go up or down on any given day. Since neural networks can examine a lot of information quickly and sort it all out, they can be used to predict stock prices.
 - The idea of using feedforward networks to recognize handwritten characters is rather straightforward. As in most supervised training, the bitmap pattern of the handwritten character is treated as an input, with the correct letter or digit as the desired output
@@ -66,11 +76,11 @@ TO BE DONE
 - It can be used as an "instant physician" trained an autoassociative memory neural network to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment.
 
 
-**Advantages of Neural networks**  
+**Advantages of Random Forest Classifier**  
 - neuralnetworks can do a good job of generalization particularly on functions in which the interactions between inputs are not too intricate, and for which the output varies smoothly with the input.
 - Parallel organization permits solutions to  problems where multiple constraints must be satisfied simultaneously
 
-**Disadvantages of Neural networks**  
+**Disadvantages of Random Forest Classifier**  
 - Neural networks are clearly an attribute-based representation, and do not have the expressive power of general logical representations.
 - MLP requires tuning a large number of hyperparameters.The solution quality of an ANN is known to be affected by the number of layers, the number of neurons at each layer, the transfer function of each neuron, and the size of the training set.
 - For non trivial problems, you generally need a very large network which can be extraordinarily time intensive to evaluate at inference time. This makes them expensive for production uses.
@@ -78,6 +88,13 @@ TO BE DONE
 **Why choose this model**  
 TO BE DONE
 
+**Measurements from Random Forest Classifier**  
+
+| Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
+| -------------       |:-------------:         | -----:               | ------:       | ------:   |
+| 100                 | 0.034                  | 0.002                |  0.992        | 0.750     |
+| 200                 | 0.033                  | 0.002                |  0.992        | 0.744     |
+| 296                 | 0.028                  | 0.002                |  0.987        | 0.748     |
 
 
 
