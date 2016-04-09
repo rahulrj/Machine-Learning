@@ -18,6 +18,7 @@ Let's go over them one by one
  -  By introducing the kernel, SVMs gain flexibility in the choice of the form of the threshold separating the different types of data. We can also write our custom kernels to specify the similarity between the data. This feature of writing custom kernels makes it very versatile.
  -  The SVMs gives a good generalization performance even in case of high-dimensional data and a small set of training patterns.
 
+
 **Disadvantages of SVM**
 - SVMs don't work well with large datasets because the time complexity of training them is of the order of O(N^3).From a practical point of view this is the most serious problem of the SVMs is the high algorithmic complexity and extensive memory requirements of the required quadratic programming in large-scale tasks.
 - Also they don't work when the data contains a lot of noise and the classes are overalpping to each other.
@@ -101,6 +102,15 @@ TO BE DONE
 
 
 ## Choosing the best model 
-- gaussian NB has very low F1 score for both training and test set
+Among the three models, one model that is not at all performing well with this data is Gaussin NB classifier. Its F1 score for both the training and testing sets is extremely low compared to the other two classifiers.For training size of 100, it has a F1 score of .35 and so the test set performs poorly also in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the arrtibute `abcenses`(the number of abscenses he has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also it does't take any parameters which can be tuned to improve its F1 score.
+
+
+
+
+
+
 - RFC has a little high training time
 - NB performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the arrtibute `abcenses`(the number of abscenses he has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study)
+- Resources:
+ -  Cost:
+ -  Performance:
