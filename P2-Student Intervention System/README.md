@@ -99,4 +99,8 @@ TO BE DONE
 | 296                 | 0.028                  | 0.002                |  0.987        | 0.748     |
 
 
+
 ## Choosing the best model 
+- gaussian NB has very low F1 score for both training and test set
+- RFC has a little high training time
+- NB performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the arrtibute `abcenses`(the number of abscenses he has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively.
