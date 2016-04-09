@@ -114,11 +114,6 @@ TODO:  choose the two best parameters and plot a graph
 - The time complexity of training an SVM is of the order of O(N^3) while for a Random Forest, it is O(M(mn log n) where n is the number of  instances and m is the number of attributes, and M is the number of trees. However, for this amount of data, SVM performs 5 times better in terms of training time.
 - Although the prediction time of training set in case of Random Forest is comparayively less than that of SVM, but in case of prediction time of test sets, its almost equal for both of them (0.002 s).
 
+So based on the limited amount of data we have(400) and by observing the time complexity of these models, we can safely choose SVM for this purpose. In case of RFC, i think it needs more fine tuning of its parameters to overcome the problem of overfitting and if the data size is very large, it can outperform SVM in terms of time complexity.
 
 
-
-- RFC has a little high training time
-- NB performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the arrtibute `abcenses`(the number of abscenses he has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study)
-- Resources:
- -  Cost:
- -  Performance:
