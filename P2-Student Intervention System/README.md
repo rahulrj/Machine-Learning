@@ -16,12 +16,13 @@ Let's go over them one by one
  **Advantages of SVM**
  - SVMs do a great job in formulating non-linear decesion boundaries. Other supervised learning methods like Decesion Trees and Logistic regression won't give optimised results when the data is randomly distributed and there is no clear linear separation between them.
  -  By introducing the kernel, SVMs gain flexibility in the choice of the form of the threshold separating the different types of data. We can also write our custom kernels to specify the similarity between the data. This feature of writing custom kernels makes it very versatile.
- -  The SVMs gives a good generalization performance even in case of high-dimensional data and a small set of training patterns.
+ -  The SVM is an effective tool in high-dimensional spaces, which is particularly applicable to document classification and sentiment analysis where the dimensionality can be extremely large (≥10^6).
 
 
 **Disadvantages of SVM**
 - SVMs don't work well with large datasets because the time complexity of training them is of the order of O(N^3).From a practical point of view this is the most serious problem of the SVMs is the high algorithmic complexity and extensive memory requirements of the required quadratic programming in large-scale tasks.
 - Also they don't work when the data contains a lot of noise and the classes are overalpping to each other.
+- In situations where the number of features for each object (pp) exceeds the number of training data samples (nn), SVMs can perform poorly. This can be seen intuitively, as if the high-dimensional feature space is much larger than the samples, then there are less effective support vectors on which to support the optimal linear hyperplanes.
 
 
 **Why choose this model?**  
