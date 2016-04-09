@@ -117,6 +117,6 @@ I think SVM is the best model for classifying the given data. The reasons for th
 So based on the limited amount of data we have(400) and by observing the time complexity of these models, we can safely choose SVM for this purpose. In case of RFC, i think it needs more fine tuning of its parameters to overcome the problem of overfitting and if the data size is very large, it can outperform SVM in terms of time complexity.
 
 
-*** How does an SVM work?
+### How does an SVM work?
 
 An SVM is just a simple linear separator.
