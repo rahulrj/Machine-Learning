@@ -120,5 +120,5 @@ So based on the limited amount of data we have(400) and by observing the time co
 ### How does an SVM work?
 
 An SVM is just a simple linear separator.
-![](https://github.com/rahulrj/Machine-Learning/blob/master/P2-Student%20Intervention%20System/svm_img.jpeg)
+![](https://github.com/rahulrj/Machine-Learning/blob/master/P2-Student%20Intervention%20System/svm_img.jpeg =200x200)
 
