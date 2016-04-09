@@ -102,9 +102,15 @@ TO BE DONE
 
 
 ## Choosing the best model 
-Among the three models, one model that is not at all performing well with this data is Gaussin NB classifier. Its F1 score for both the training and testing sets is extremely low compared to the other two classifiers.For training size of 100, it has a F1 score of .35 and so the test set performs poorly also in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the arrtibute `abcenses`(the number of abscenses he has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also it does't take any parameters which can be tuned to improve its F1 score.
 
+### Which is the best model?
 
+I think SVM is the best model for classifying the given data. The reasons for the same are as follows
+TODO:  choose the two best parameters and plot a graph
+
+Among the three models, one model that is not at all performing well with this data is Gaussin NB classifier. Its F1 score for both the training and testing sets is extremely low compared to the other two classifiers.For training size of 100, it has a F1 score of .35 and so the test set performs poorly also in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the arrtibute `abcenses`(the number of abscenses he has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also it doesn't take any parameters which can be tuned to improve its F1 score.
+
+Now comes the Forest Classifier and SVM. Among these models, Random Forest has an exteremely high F1 socre, which is a clear sign of overfitting and looks like it has not been able to generalize well over the data.
 
 
 
