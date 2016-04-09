@@ -119,6 +119,9 @@ So based on the limited amount of data we have(400) and by observing the time co
 
 ### How does an SVM work?
 
-An SVM is just a simple linear separator.
+An SVM is just a simple linear separator. It separates two classes by drawing a line between them. In layman's terms, it involves finding the hyperplane (line in 2D, plane in 3D and hyperplane in higher dimensions. More formally, a hyperplane is n-1 dimensional subspace of an n-dimensional space) that best separates two classes of points with the maximum margin.In the above diagram, there are two types of classes present represented as black and white circles. Now there are an infinite number of lines that can be drawn in the diagram to separate the black and white circles. But SVM chooses the line that maximises the distance between two points that are closest and belong to opposite classes.In the figure, that line is the middle one.
+
+The closest points of which it is trying to maximize the diatnace are called as  the "support vectors" (the name "support vector machine" is due to the fact that points are like vectors and that the best line "depends on" or is "supported by" the closest points).In the above diagram,the points from which the lines `wx-b=1` and `wx-b=-1` passes are support vectors.The connecting lines between the closest points is drawn by doing vector subtraction (point A - point B). Now the best separating line to be the line that bisects -- and is perpendicular to -- the connecting line.
+
 ![](svm_img.png)
 
