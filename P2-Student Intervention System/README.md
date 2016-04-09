@@ -127,7 +127,7 @@ In the above diagram(image credit-Quora), there are two types of classes present
 
 The closest points of which it is trying to maximize the diatnace are called as  the "support vectors" (the name "support vector machine" is due to the fact that points are like vectors and that the best line "depends on" or is "supported by" the closest points).In the above diagram,the points from which the lines `wx-b=1` and `wx-b=-1` passes are support vectors.The connecting lines between the closest points is drawn by doing vector subtraction (point A - point B). Now the best separating line to be the line that bisects -- and is perpendicular to -- the connecting line.
 
-Now, when there is no clear linear spearation between the data as in the below image(credit-Udacity Lecture), then we have to adopt a method known as Kernel Trick. So what we essentially do here is 
+Now, when there is no clear linear spearation between the data as in the below image(credit-CS Utah slides), then we have to adopt a method known as Kernel Trick. So in the left image each point is defined by two features(x1,x2). Now we map each point (x1,x2) as Z=(x1^2,sqrt(2)x1*x2,x2^2). If we map each point using the newly created three features, the data becomes linearly separable as shown in the right image.
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](non_linear_svm.png)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;![](non_linear_svm_kt.png)
 
