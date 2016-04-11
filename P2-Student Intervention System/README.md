@@ -16,12 +16,13 @@ Let's go over them one by one
  **Advantages of SVM**
  - SVMs do a great job in formulating non-linear decesion boundaries. Other supervised learning methods like Decesion Trees and Logistic regression won't give optimised results when the data is randomly distributed and there is no clear linear separation between them.
  -  By introducing the kernel, SVMs gain flexibility in the choice of the form of the threshold separating the different types of data. We can also write our custom kernels to specify the similarity between the data. This feature of writing custom kernels makes it very versatile.
- -  The SVMs gives a good generalization performance even in case of high-dimensional data and a small set of training patterns.
+ -  The SVM is an effective tool in high-dimensional spaces, which is particularly applicable to document classification and sentiment analysis where the dimensionality can be extremely large (≥10^6).
 
 
 **Disadvantages of SVM**
 - SVMs don't work well with large datasets because the time complexity of training them is of the order of O(N^3).From a practical point of view this is the most serious problem of the SVMs is the high algorithmic complexity and extensive memory requirements of the required quadratic programming in large-scale tasks.
 - Also they don't work when the data contains a lot of noise and the classes are overalpping to each other.
+- In situations where the number of features for each object (pp) exceeds the number of training data samples (nn), SVMs can perform poorly. This can be seen intuitively, as if the high-dimensional feature space is much larger than the samples, then there are less effective support vectors on which to support the optimal linear hyperplanes.
 
 
 **Why choose this model?**  
@@ -123,9 +124,11 @@ An SVM is just a simple linear separator. It separates two classes by drawing a 
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](svm_img.png)
 
-In the above diagram, there are two types of classes present represented as black and white circles. Now there are an infinite number of lines that can be drawn in the diagram to separate the black and white circles. But SVM chooses the line that maximises the distance between two points that are closest and belong to opposite classes.In the figure, that line is the middle one.
+In the above diagram(image credit-Quora), there are two types of classes present represented as black and white circles. Now there are an infinite number of lines that can be drawn in the diagram to separate the black and white circles. But SVM chooses the line that maximises the distance between two points that are closest and belong to opposite classes.In the figure, that line is the middle one.
 
 The closest points of which it is trying to maximize the diatnace are called as  the "support vectors" (the name "support vector machine" is due to the fact that points are like vectors and that the best line "depends on" or is "supported by" the closest points).In the above diagram,the points from which the lines `wx-b=1` and `wx-b=-1` passes are support vectors.The connecting lines between the closest points is drawn by doing vector subtraction (point A - point B). Now the best separating line to be the line that bisects -- and is perpendicular to -- the connecting line.
 
+Now, when there is no clear linear spearation between the data as in the below image(credit-CS Utah slides), then we have to adopt a method known as Kernel Trick. So in the left image each point is defined by two features(x1,x2). Now we map each point (x1,x2) as Z=(x1^2,sqrt(2)x1*x2,x2^2). If we map each point using the newly created three features, the data becomes linearly separable as shown in the right image.
 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](non_linear_svm.png)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;![](non_linear_svm_kt.png)
 
