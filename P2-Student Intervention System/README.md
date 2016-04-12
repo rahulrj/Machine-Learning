@@ -1,8 +1,15 @@
-## Training and Evaluating Models  
+## 1. Classification vs Regression
+
+This is a classification problem. Becuase we are given the student's data and its attribute and we have to classify that whether a particular student is in need of intervention or not. When we classify an example based on its given attributes and by learning from the training data, it is an example of classification problem.
+It would have been an example of regression if we had to find some continuous value based on the atrribute of the data. For example, in Boston Housing prices data set, we were given the attributes of each locality and we had to predict the price of a house in that particular locality. So the model which produces a continuous value as output is a regression model while the one which produces a discrete output is classification problem.
+
+
+
+## 4. Training and Evaluating Models  
 I choose the following three supervised learning models for this dataset  
 1. Support Vector Machines  
 2. Gaussian Naive Bayes  
-3. Some random algorithm 
+3. Random Forest Classifier 
 
 Let's go over them one by one
 
