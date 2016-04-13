@@ -29,7 +29,7 @@ Let's go over them one by one
 **Disadvantages of SVM**
 - SVMs don't work well with large datasets because the time complexity of training them is of the order of O(N^3).From a practical point of view this is the most serious problem of the SVMs is the high algorithmic complexity and extensive memory requirements of the required quadratic programming in large-scale tasks.
 - Also they don't work when the data contains a lot of noise and the classes are overalpping to each other.
-- In situations where the number of features for each object (pp) exceeds the number of training data samples (nn), SVMs can perform poorly. This can be seen intuitively, as if the high-dimensional feature space is much larger than the samples, then there are less effective support vectors on which to support the optimal linear hyperplanes.
+- In situations where the number of features for each object exceeds the number of training data samples, SVMs can perform poorly. This can be seen intuitively, as if the high-dimensional feature space is much larger than the samples, then there are less effective support vectors on which to support the optimal linear hyperplanes.
 
 
 **Why choose this model?**  
@@ -45,21 +45,21 @@ TO BE DONE
 
 ### Gaussian Naive Bayes  
 **Applications of SVM**
-- Document Classification.remains a popular (baseline) method for text categorization
-- Spam filtering. the problem of judging documents as belonging to one category or the other such as spam or legitimate
-- It also finds application in automatic medical diagnosis
-- credit approval
-- Recommender system that predicts wheteher the user will like a given resource
+- A major use of Naive Bayes is in Document Classification.It remains a popular (baseline) method for text categorization.
+- Another common application is Spam filtering i.e making incoming emails as spam based on the contents of the mail.
+- It also finds application in automatic medical diagnosis i.e calculating the probability that a person has a disease or not?
+- It's used in credit approval systems where we determine whether a person should be issued a credit card on not based on the attributes(household income, education etc) of that person. 
+- It's used in building Recommender system that predicts wheteher the user will like a given resource. It has countless uses in the socail networks like Facebook and other sites like Netflix and Airbnb.
 
 
 **Advantages of Naive Bayes**  
-- They require a small amount of training data to estimate the necessary parameters.
+- A very big advantage is that they require a small amount of training data to estimate the necessary parameters.
 - Naive Bayes learners and classifiers can be extremely fast compared to more sophisticated methods.The decoupling of the class conditional feature distributions means that each distribution can be independently estimated as a one dimensional distribution. This in turn helps to alleviate problems stemming from the curse of dimensionality.
-- Naive Bayes classifiers are highly scalable, requiring a number of parameters linear in the number of variables (features/predictors) in a learning problem
+- Naive Bayes classifiers are highly scalable, requiring a number of parameters linear in the number of variables (features/predictors) in a learning problem.
 
 **Disadvantages of Naive Bayes**  
-- apparently over-simplified assumptions
-- On the flip side, although naive Bayes is known as a decent classifier, it is known to be a bad estimator, so the probability outputs are not to be taken too seriously.
+- When the data has lot of dependent attributes it will actually perform poorly because of its apparently over-simplified assumptions regarding conditional independence.
+- Although naive Bayes is known as a decent classifier, it is known to be a bad estimator, so the probability outputs are not to be taken too seriously.
 - Naive Bayes assumes that the affect of an attribute value on a given class is independent of the value of other attributes.
 
 
@@ -79,16 +79,16 @@ TO BE DONE
 ### Random Forest Classifier
 **Applications of Random Forest Classifier**
 -Binomial Option Pricing- One of the most basic fundamental applications of decision tree analysis is for the purpose of option pricing. The binomial option pricing model uses discrete probabilities to determine the value of an option at expiration
-- It can be used as an "instant physician" trained an autoassociative memory neural network to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment
-- In stock market business,many factors weigh in whether a given stock will go up or down on any given day
+- It can be used as an "instant physician".An autoassociative memory neural network can be trained to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment.
+- Its used in the stock market business,where many factors weigh in to determine whether a given stock will go up or down on any given day.
 
 **Advantages of Random Forest Classifier**  
 - Random forest runtimes are quite fast, and they are able to deal with unbalanced and missing data
-- Random decision forests correct for decision trees' habit of overfitting to their training set.
-- Lastly, the ability of automatically producing accuracy and variable importance and information about outliers makes random forests easier to use effectively
+- Random decision forests specially correct for decision trees' habit of overfitting to their training set.
+- The ability of automatically producing accuracy and variable importance and information about outliers makes random forests easier to use effectively.
 - The other main advantage is that, because of how they are constructed (using bagging or boosting) these algorithms handle very well high dimensional spaces as well as large number of training examples.
-- random forests is not very sensitive to the parameters used to run it and it is easy to determine which parameters to use
-- It gives estimates of what variables are important in the classification.
+- Random forests is not very sensitive to the parameters used to run it and it is easy to determine which parameters to use.
+- Another fair advantage is that it gives estimates of what variables are important in the classification.
 
 
 **Disadvantages of Random Forest Classifier**  
