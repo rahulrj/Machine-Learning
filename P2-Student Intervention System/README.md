@@ -15,10 +15,10 @@ Let's go over them one by one
 
 ### Support Vector Machines
 **Applications of SVM**
-
- Support Vector Machine (SVM) is primarily a classier method that performs classification tasks by constructing hyperplanes in a multidimensional space that separates cases of different class labels.SVM supports both regression and classification tasks and can handle multiple continuous and categorical variables. As we saw in the same project, the categorical variables are turned into boolean variables by creating some dummy columns.
- 
- SVMs can be used to perform both multi-class classification and regression.In addition to performing linear classification, SVMs can efficiently perform a non-linear classification by mapping their inputs into high-dimensional feature spaces.
+- Personalied and learner centered learning is receiving increasing importance due to increased learning rate. AI techniques to tailor the content to the learner depending on his context and need are being deployed for such tasks.SVMs stand out due to their better perfromance specially in handling large dimensions which text content do possess.
+- Clustering is an important task for image compression. This clustering can be done by SVM efficiently. 
+- SVM wasused to classifiy different land covers using remote sensing data. Results from that study also suggested  that Multi-class SVMs perform well in comparison with neural network and decision tree classifiers.
+- SVMs have also been used in handwritten digit recognition.
  
  **Advantages of SVM**
  - SVMs do a great job in formulating non-linear decesion boundaries. Other supervised learning methods like Decesion Trees and Logistic regression won't give optimised results when the data is randomly distributed and there is no clear linear separation between them.
