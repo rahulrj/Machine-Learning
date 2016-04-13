@@ -77,8 +77,8 @@ TO BE DONE
 
 
 ### Random Forest Classifier
-**Applications of Random Forest Classifier**
--Binomial Option Pricing- One of the most basic fundamental applications of decision tree analysis is for the purpose of option pricing. The binomial option pricing model uses discrete probabilities to determine the value of an option at expiration
+**Applications of Random Forest Classifier**  
+- Binomial Option Pricing :One of the most basic fundamental applications of decision tree analysis is for the purpose of option pricing. The binomial option pricing model uses discrete probabilities to determine the value of an option at expiration
 - It can be used as an "instant physician".An autoassociative memory neural network can be trained to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment.
 - Its used in the stock market business,where many factors weigh in to determine whether a given stock will go up or down on any given day.
 
@@ -97,7 +97,9 @@ TO BE DONE
 - A large number of trees in Random Forest may make the algorithm slow for real-time prediction.
 
 **Why choose this model**  
-TO BE DONE
+Here i beleive the Random Forest will prove really good in classifying because it's one of the Ensemble Learning methods.One common problem of Decesion Trees is that even small variations in the data can altogether alter the generated tree but when we use Ensemble methods,they average the results of different Decesion Trees, so there wont be much fluctuation in the results.  
+Decesion Trees in general perform well on classification problems when the data set is not huge, and Random Forests overcome all the negative points that a Decesion Tree have and are able to generalize the data well thus avoiding overfitting.
+
 
 **Measurements from Random Forest Classifier**  
 
