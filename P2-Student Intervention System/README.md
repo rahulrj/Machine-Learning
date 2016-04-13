@@ -33,7 +33,7 @@ Let's go over them one by one
 
 
 **Why choose this model?**  
-TO BE DONE
+First of all, the number of rows in the data is only 296. So as SVMs perform very well in small size datasets, that's why SVMs make a good fit here. Also, as in most real-world scenarios, the decesion boundaries are not linear and SVMs have an advantage on the place where the data is randomly dustribued and the decesion boundary is not-linear.
 
 **Measurements from SVM**
 
