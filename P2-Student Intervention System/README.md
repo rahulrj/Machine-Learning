@@ -92,9 +92,9 @@ TO BE DONE
 
 
 **Disadvantages of Random Forest Classifier**  
-- when used for regression they cannot predict beyond the range in the training data, and that they may over-fit data sets that are particularly noisy
+- When used for regression they cannot predict beyond the range in the training data, and that they may over-fit data sets that are particularly noisy.
 - Another issue related to regression is that random forests tends to overestimate the low values and underestimate the high values. This is because the response from random forests in the case of regression is the average (mean) of all of the trees.
-- a large number of trees may make the algorithm slow for real-time prediction
+- A large number of trees in Random Forest may make the algorithm slow for real-time prediction.
 
 **Why choose this model**  
 TO BE DONE
