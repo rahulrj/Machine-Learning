@@ -32,7 +32,7 @@ Let's go over them one by one
 - In situations where the number of features for each object exceeds the number of training data samples, SVMs can perform poorly. This can be seen intuitively, as if the high-dimensional feature space is much larger than the samples, then there are less effective support vectors on which to support the optimal linear hyperplanes.
 
 
-**Why choose this model?**  
+**Why chose this model?**  
 First of all, the number of rows in the data is only 296. So as SVMs perform very well in small size datasets, that's why SVMs make a good fit here. Also, as in most real-world scenarios, the decesion boundaries are not linear and SVMs have an advantage on the place where the data is randomly dustribued and the decesion boundary is not-linear.
 
 **Measurements from SVM**
@@ -63,7 +63,7 @@ First of all, the number of rows in the data is only 296. So as SVMs perform ver
 - Naive Bayes assumes that the affect of an attribute value on a given class is independent of the value of other attributes.
 
 
-**Why choose this model**  
+**Why chose this model?**  
 TO BE DONE
 
 
@@ -96,7 +96,7 @@ TO BE DONE
 - Another issue related to regression is that random forests tends to overestimate the low values and underestimate the high values. This is because the response from random forests in the case of regression is the average (mean) of all of the trees.
 - A large number of trees in Random Forest may make the algorithm slow for real-time prediction.
 
-**Why choose this model**  
+**Why chose this model?**  
 Here i beleive the Random Forest will prove really good in classifying because it's one of the Ensemble Learning methods.One common problem of Decesion Trees is that even small variations in the data can altogether alter the generated tree but when we use Ensemble methods,they average the results of different Decesion Trees, so there wont be much fluctuation in the results.  
 Decesion Trees in general perform well on classification problems when the data set is not huge, and Random Forests overcome all the negative points that a Decesion Tree have and are able to generalize the data well thus avoiding overfitting.
 
