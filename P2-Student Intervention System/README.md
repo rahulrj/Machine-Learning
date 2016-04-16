@@ -134,12 +134,11 @@ Decesion Trees in general perform well on classification problems when the data 
 
 
 
-## Choosing the best model 
+## 5. Choosing the best model 
 
 ### Which is the best model?
 
 I think SVM is the best model for classifying the given data. The reasons for the same are as follows
-**TODO:  choose the two best parameters and plot a graph**
 
 - Among the three models, one model that is not at all performing well with this data is Gaussin NB classifier. Its F1 score for both the training and testing sets is extremely low compared to the other two classifiers.For training size of 100, it has a F1 score of .35 and so the test set performs poorly also in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `abcenses`(the number of abscenses a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
 
@@ -167,3 +166,35 @@ Now, when there is no clear linear spearation between the data as in the below i
 
 The job of classifying the data into different data sets is given to the Kernal Function. It is the Kernel function that takes into input two data points and emits out the similarity between those points. Two common kernels used in SVMs are Linear kernels and Radial Basis Function(RBF) kernel.
 
+### Fine tuning of the classifier
+```
+# TODO: Fine-tune your model and report the best F1 score
+from sklearn import grid_search
+from sklearn.metrics import f1_score
+
+clf = svm.SVC()
+param_grid = [
+  {'C': [1, 10, 50, 100, 200, 250, 300, 350, 400, 500, 600],
+   'kernel':['rbf','poly','sigmoid'],
+   'gamma': [1,0.1,0.01,0.001,0.0001,0.00001,0.000001],
+    'tol':[1,0.1,0.01,0.001,0.0001,0.00001,0.0000001]
+  }
+ ]
+
+regressor = grid_search.GridSearchCV(clf, param_grid, cv=5,scoring='f1_weighted')
+regressor.fit(X_train, y_train)
+reg = regressor.best_estimator_
+print reg
+train_predict(reg, X_train, y_train,X_test,y_test)
+```
+
+I have supplied different parameters of an SVM to `GridSearchCV` that searches effectively for the best combination of parameters. The best model produced from the above `GridSearchCV` is
+```
+SVC(C=250, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.001, kernel='poly',
+  max_iter=-1, probability=False, random_state=None, shrinking=True,
+  tol=0.1, verbose=False)
+  ```
+
+### Model's final F1 score.
+The classifier's final F1 score for the tarining set came out to be 0.868008948546
