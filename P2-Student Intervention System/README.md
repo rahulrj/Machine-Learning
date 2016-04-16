@@ -61,9 +61,9 @@ First of all, the number of rows in the data is only 296. So as SVMs perform ver
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.002                  | 0.001                |  0.886        | 0.785     |
-| 200                 | 0.004                  | 0.003                |  0.88         | 0.792     |
-| 296                 | 0.007                  | 0.007                |  0.862        | 0.805     |
+| 100                 | 0.002                  | 0.001                |  0.846        | 0.844     |
+| 200                 | 0.004                  | 0.003                |  0.856        | 0.842     |
+| 296                 | 0.007                  | 0.007                |  0.868        | 0.842     |
 
 ### Gaussian Naive Bayes  
 **Applications of SVM**
