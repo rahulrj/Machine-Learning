@@ -1,6 +1,6 @@
 ## 1. Classification vs Regression
 
-This is a classification problem. Becuase we are given the student's data and its attribute and we have to classify that whether a particular student is in need of intervention or not. When we classify an example based on its given attributes and by learning from the training data, it is an example of classification problem.
+This is a classification problem. Becuase we are given the student's data and its attribute and we have to classify that whether a particular student is in need of intervention or not. When we classify an example based on its given attributes and by learning from the training data, it is an example of classification problem.  
 It would have been an example of regression if we had to find some continuous value based on the atrribute of the data. For example, in Boston Housing prices data set, we were given the attributes of each locality and we had to predict the price of a house in that particular locality. So the model which produces a continuous value as output is a regression model while the one which produces a discrete output is classification problem.
 
 
@@ -63,8 +63,8 @@ First of all, the number of rows in the data is only 296. So as SVMs perform ver
 - Naive Bayes assumes that the affect of an attribute value on a given class is independent of the value of other attributes.
 
 
-**Why chose this model?**  
-TO BE DONE
+**Why chose this model?** 
+Naive Bayes classifier is always a good bet if we want something fast and easy that performs pretty well. Also it will perform better if the assumption of conditional independence actually holds true between the attributes. In the given data, as i can see that there is a little dependence between atrrubtes like `health` and `absences` etc.So there can be a slight dip in its performance. But overall,it will perform pretty well.
 
 
 **Measurements from Gaussian NB**  
