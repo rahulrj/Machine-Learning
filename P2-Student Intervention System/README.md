@@ -60,7 +60,8 @@ First of all, the number of rows in the data is only 296. So as SVMs perform ver
 **Disadvantages of Naive Bayes**  
 - When the data has lot of dependent attributes it will actually perform poorly because of its apparently over-simplified assumptions regarding conditional independence.
 - Although naive Bayes is known as a decent classifier, it is known to be a bad estimator, so the probability outputs are not to be taken too seriously.
-- Naive Bayes assumes that the affect of an attribute value on a given class is independent of the value of other attributes.
+- It has a very simple representation and doesn't allow for rich hypotheses.
+
 
 
 **Why chose this model?** 
