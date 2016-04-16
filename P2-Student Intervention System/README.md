@@ -177,7 +177,7 @@ clf = svm.SVC()
 param_grid = [
   {'C': [1, 10, 50, 100, 200, 250, 300, 350, 400, 500, 600],
    'kernel':['rbf','poly','sigmoid'],
-   'gamma': [1,0.1,0.01,0.001,0.0001,0.00001,0.000001],
+   'gamma': [1,0.1,0.01,0.001,0.0001,0.00001,0.000001,0.0000001],
     'tol':[1,0.1,0.01,0.001,0.0001,0.00001,0.0000001]
   }
  ]
@@ -191,11 +191,11 @@ train_predict(reg, X_train, y_train,X_test,y_test)
 
 I have supplied different parameters of an SVM to `GridSearchCV` that searches effectively for the best combination of parameters. The best model produced from the above `GridSearchCV` is
 ```
-SVC(C=250, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape=None, degree=3, gamma=0.001, kernel='poly',
+SVC(C=200, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.001, kernel='rbf',
   max_iter=-1, probability=False, random_state=None, shrinking=True,
-  tol=0.1, verbose=False)
+  tol=0.001, verbose=False)
   ```
 
 ### Model's final F1 score.
-The classifier's final F1 score for the tarining set came out to be 0.883008948546
+The classifier's final F1 score for the tarining set came out to be 0.886836027714
