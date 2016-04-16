@@ -94,9 +94,9 @@ Naive Bayes classifier is always a good bet if we want something fast and easy t
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.002                  | 0.001                |  0.352        | 0.179     |
-| 200                 | 0.001                  | 0.001                |  0.793        | 0.729     |
-| 296                 | 0.001                  | 0.001                |  0.818        | 0.789     |
+| 100                 | 0.002                  | 0.001                |  0.845        | 0.707     |
+| 200                 | 0.001                  | 0.001                |  0.756        | 0.742     |
+| 296                 | 0.001                  | 0.001                |  0.821        | 0.748     |
 
 
 ### Random Forest Classifier
@@ -129,9 +129,9 @@ Decesion Trees in general perform well on classification problems when the data 
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.034                  | 0.002                |  0.992        | 0.750     |
-| 200                 | 0.033                  | 0.002                |  0.992        | 0.744     |
-| 296                 | 0.028                  | 0.002                |  0.987        | 0.748     |
+| 100                 | 0.033                  | 0.001                |  1.0          | 0.732     |
+| 200                 | 0.028                  | 0.002                |  0.996        | 0.748     |
+| 296                 | 0.030                  | 0.003                |  0.992        | 0.768     |
 
 
 
@@ -141,9 +141,9 @@ Decesion Trees in general perform well on classification problems when the data 
 
 I think SVM is the best model for classifying the given data. The reasons for the same are as follows
 
-- Among the three models, one model that is not at all performing well with this data is Gaussin NB classifier. Its F1 score for both the training and testing sets is extremely low compared to the other two classifiers.For training size of 100, it has a F1 score of .35 and so the test set performs poorly also in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `abcenses`(the number of abscenses a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
+- Among the three models, one model that is not at all performing well with this data is Gaussin NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 296, it has a F1 score of .748 and so the training set is also performing not that well in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `abcenses`(the number of abscenses a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
 
-- Now comes the Forest Classifier and SVM. Among these models, Random Forest has an exteremely high F1 socre for all three sets of training data. An F1 score too high (arround 99.2%)is a clear sign of overfitting and looks like it has not been able to generalize well over the data.
+- Now comes the Forest Classifier and SVM. Among these models, Random Forest has an exteremely high F1 socre for all three sets of training data. An F1 score too high (arround 99.2% and even 100%)is a clear sign of overfitting and looks like it has not been able to generalize well over the data.
 - The time complexity of training an SVM is of the order of O(N^3) while for a Random Forest, it is O(M(mn log n) where n is the number of  instances and m is the number of attributes, and M is the number of trees. However, for this small amount of data, SVM still performs 5 times better in terms of training time. 
 
 - Although the prediction time of training set in case of Random Forest is comparayively less than that of SVM, but in case of prediction time of test sets, its almost equal for both of them (0.002 s).
