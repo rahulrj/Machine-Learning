@@ -63,7 +63,7 @@ First of all, the number of rows in the data is only 296. So as SVMs perform ver
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
 | 100                 | 0.002                  | 0.001                |  0.886        | 0.785     |
 | 200                 | 0.004                  | 0.003                |  0.88         | 0.792     |
-| 296                 | 0.007                  | 0.007                |  0.883        | 0.805     |
+| 296                 | 0.007                  | 0.007                |  0.862        | 0.805     |
 
 ### Gaussian Naive Bayes  
 **Applications of SVM**
@@ -198,4 +198,4 @@ SVC(C=250, cache_size=200, class_weight=None, coef0=0.0,
   ```
 
 ### Model's final F1 score.
-The classifier's final F1 score for the tarining set came out to be 0.868008948546
+The classifier's final F1 score for the tarining set came out to be 0.883008948546
