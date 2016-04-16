@@ -37,9 +37,9 @@ Let's go over them one by one
 
 ### Support Vector Machines
 **Applications of SVM**
-- Personalied and learner centered learning is receiving increasing importance due to increased learning rate. AI techniques to tailor the content to the learner depending on his context and need are being deployed for such tasks.SVMs stand out due to their better perfromance specially in handling large dimensions which text content do possess.
-- Clustering is an important task for image compression. This clustering can be done by SVM efficiently. 
-- SVM wasused to classifiy different land covers using remote sensing data. Results from that study also suggested  that Multi-class SVMs perform well in comparison with neural network and decision tree classifiers.
+- It has been used in personalized and centered learning. There are a large number of AI techniques to tailor the content to the learner depending on his context.SVMs stand out due to their better perfromance specially in handling large dimensions which text content do possess.
+- Clustering is an important task for image compression. This clustering can be done by an SVM efficiently. 
+- SVM has been used  to classifiy different land covers using remote sensing data. Results have also suggested  that Multi-class SVMs perform well in comparison with neural network and decision tree classifiers.
 - SVMs have also been used in handwritten digit recognition.
  
 **Advantages of SVM**
@@ -69,7 +69,7 @@ First of all, the number of rows in the data is only 296. So as SVMs perform ver
 **Applications of SVM**
 - A major use of Naive Bayes is in Document Classification.It remains a popular (baseline) method for text categorization.
 - Another common application is Spam filtering i.e making incoming emails as spam based on the contents of the mail.
-- It also finds application in automatic medical diagnosis i.e calculating the probability that a person has a disease or not?
+- It also finds application in automatic medical diagnosis i.e calculating the probability that a person has a disease or not.
 - It's used in credit approval systems where we determine whether a person should be issued a credit card on not based on the attributes(household income, education etc) of that person. 
 - It's used in building Recommender system that predicts wheteher the user will like a given resource. It has countless uses in the socail networks like Facebook and other sites like Netflix and Airbnb.
 
@@ -101,17 +101,18 @@ Naive Bayes classifier is always a good bet if we want something fast and easy t
 
 ### Random Forest Classifier
 **Applications of Random Forest Classifier**  
-- Binomial Option Pricing :One of the most basic fundamental applications of decision tree analysis is for the purpose of option pricing. The binomial option pricing model uses discrete probabilities to determine the value of an option at expiration
-- It can be used as an "instant physician".An autoassociative memory neural network can be trained to store a large number of medical records, each of which includes information on symptoms, diagnosis, and treatment for a particular case. After training, the net can be presented with input consisting of a set of symptoms; it will then find the full stored pattern that represents the "best" diagnosis and treatment.
-- Its used in the stock market business,where many factors weigh in to determine whether a given stock will go up or down on any given day.
+
+- Its used in the stock market business,where many factors weigh in to determine whether a given stock will go up or down on any given day. Binomial Option Pricing models use it.
+- Random Forests have been applied to the task of distinguishing between stars and cosmic rays in images collected by the Hubble Space Telescope.Each of the images were described using 20 numerical features and labeled as either a star or a cosmic ray and the classifier was able to achieve a generalization accuracy of over 95%.
+- It can be used as an "instant physician".A RF can be trained with a large number of medical records, containing various diseases and its symptoms. After training, it can be presented with input consisting of a set of symptoms and the tree will determine whether the given symptoms evaluate to a disease.
+
 
 **Advantages of Random Forest Classifier**  
 - Random forest runtimes are quite fast, and they are able to deal with unbalanced and missing data
 - Random decision forests specially correct for decision trees' habit of overfitting to their training set.
 - The ability of automatically producing accuracy and variable importance and information about outliers makes random forests easier to use effectively.
 - The other main advantage is that, because of how they are constructed (using bagging or boosting) these algorithms handle very well high dimensional spaces as well as large number of training examples.
-- Random forests is not very sensitive to the parameters used to run it and it is easy to determine which parameters to use.
-- Another fair advantage is that it gives estimates of what variables are important in the classification.
+- Random forests is not very sensitive to the parameters used to run it.
 
 
 **Disadvantages of Random Forest Classifier**  
