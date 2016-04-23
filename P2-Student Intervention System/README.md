@@ -163,7 +163,7 @@ Now for 2-d data, it is a process of finding a separating line, while for 3-d da
 
 The closest points of which it is trying to maximize the distance are called as  the "support vectors" .In the above diagram,the points from which the two dashed lines are passing are support vectors(lets call them A and B). Then the connecting lines between those  closest points(A and B) is drawn . Now the best separating line is the line that bisects and is perpendicular to the connecting line.
 
-Now, when there is no clear linear separation between the data as in the below image(**credit-CS Utah slides**), then we have to adopt a method known as Kernel Trick. So in the left image each point is defined by two features `(x1,x2)`. Now we map each point `(x1,x2)` as `Z=(x1^2,sqrt(2)x1*x2,x2^2)`. If we map each point using the newly created three features, the data becomes linearly separable as shown in the right image.
+Sometimes, there is no clear linear separation between the data as in the below image(**credit-CS Utah slides**). In the left image below, we cannot draw a line to separate the blue and red circles. So we adopt a method known as Kernel Trick. In Kernel trick , we introcuce a new dimension in the data  and then plot the points based on all three dimensions. Now as we can see in the right image, the blue and red circles are separable by drawing a plane between them. This plane is equivalent to drawing a circle between the two classes( the dashed circle in the left image).
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](non_linear_svm.png)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;![](non_linear_svm_kt.png)
 
