@@ -8,7 +8,7 @@ It would have been an example of regression if we had to find some continuous va
 Total number of students: 395  
 Number of students who passed: 265  
 Number of students who failed: 130  
-Number of features: 31  
+Number of features: 30  
 Graduation rate of the class: 67.09%  
 
 ## 3. Preparing the Data
@@ -141,7 +141,7 @@ Decision Trees in general perform well on classification problems when the data 
 
 I think SVM is the best model for classifying the given data. The reasons for the same are as follows
 
-- Among the three models, one model that is not at all performing well with this data is Gaussian NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 300, it has a F1 score of .423 and so the training set is also performing not that well in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `absences`(the number of absences a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
+- Among the three models, one model that is not at all performing well with this data is Gaussian NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 100, it has a F1 score of 0.423 while for training size 300, its 0.811 and  the training set is also performing not that well in both cases. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `absences`(the number of absences a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
 
 - Now comes the Forest Classifier and SVM. Among these models, Random Forest has an extremely high F1 score for all three sets of training data. An F1 score too high (arround 99.2% and even 100%)is a clear sign of overfitting and looks like it has not been able to generalize well over the data.
 - The time complexity of training an SVM is of the order of O(N^3) while for a Random Forest, it is O(M(mn log n) where n is the number of  instances and m is the number of attributes, and M is the number of trees. However, for this small amount of data, SVM still performs 5 times better in terms of training time.
@@ -184,7 +184,7 @@ param_grid = [
   {'C': [1, 10, 50, 100, 200, 250, 300, 350, 400, 500, 600],
    'kernel':['rbf','poly','sigmoid'],
    'gamma': [1,0.1,0.01,0.001,0.0001,0.00001,0.000001,0.0000001],
-    'tol':[1,0.1,0.01,0.001,0.0001,0.00001,0.0000001]
+    'tol':[0.01,0.001,0.0001,0.00001,0.0000001]
   }
  ]
 
@@ -197,11 +197,11 @@ train_predict(reg, X_train, y_train,X_test,y_test)
 
 I have supplied different parameters of an SVM to `GridSearchCV` that searches effectively for the best combination of parameters. The best model produced from the above `GridSearchCV` is
 ```
-SVC(C=600, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape=None, degree=3, gamma=0.001, kernel='poly',
+SVC(C=1, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
   max_iter=-1, probability=False, random_state=None, shrinking=True,
-  tol=0.001, verbose=False)
+  tol=0.01, verbose=False)
   ```
 
 ### Model's final F1 score.
-The classifier's final F1 score for the training set came out to be 0.899297423888
+The classifier's final F1 score for the training set came out to be 0.978102189781
