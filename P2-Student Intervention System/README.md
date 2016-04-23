@@ -23,8 +23,8 @@ Processed feature columns (48):-
 ['school_GP', 'school_MS', 'sex_F', 'sex_M', 'age', 'address_R', 'address_U', 'famsize_GT3', 'famsize_LE3', 'Pstatus_A', 'Pstatus_T', 'Medu', 'Fedu', 'Mjob_at_home', 'Mjob_health', 'Mjob_other', 'Mjob_services', 'Mjob_teacher', 'Fjob_at_home', 'Fjob_health', 'Fjob_other', 'Fjob_services', 'Fjob_teacher', 'reason_course', 'reason_home', 'reason_other', 'reason_reputation', 'guardian_father', 'guardian_mother', 'guardian_other', 'traveltime', 'studytime', 'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences']
 
 ### Split data into training and test set
-Training set: 296 samples  
-Test set: 99 samples
+Training set: 300 samples  
+Test set: 95 samples
 
 
 ## 4. Training and Evaluating Models  
@@ -55,15 +55,15 @@ Let's go over them one by one
 
 
 **Why chose this model?**  
-First of all, the number of rows in the data is only 296. So as SVMs perform very well in small size datasets, that's why SVMs make a good fit here. Also, as in most real-world scenarios, the decision boundaries are not linear and SVMs have an advantage on the place where the data is randomly distributed and the decision boundary is not-linear.
+First of all, the number of rows in the data is only 300. So as SVMs perform very well in small size datasets, that's why SVMs make a good fit here. Also, as in most real-world scenarios, the decision boundaries are not linear and SVMs have an advantage on the place where the data is randomly distributed and the decision boundary is not-linear.
 
 **Measurements from SVM**
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.002                  | 0.001                |  0.846        | 0.844     |
-| 200                 | 0.004                  | 0.003                |  0.856        | 0.842     |
-| 296                 | 0.007                  | 0.007                |  0.868        | 0.842     |
+| 100                 | 0.001                  | 0.001                |  0.855        | 0.753     |
+| 200                 | 0.004                  | 0.004                |  0.842        | 0.794     |
+| 300                 | 0.007                  | 0.007                |  0.863        | 0.786     |
 
 ### Gaussian Naive Bayes  
 **Applications of SVM**
@@ -94,9 +94,9 @@ Naive Bayes classifier is always a good bet if we want something fast and easy t
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.002                  | 0.001                |  0.845        | 0.707     |
-| 200                 | 0.001                  | 0.001                |  0.756        | 0.742     |
-| 296                 | 0.001                  | 0.001                |  0.821        | 0.748     |
+| 100                 | 0.002                  | 0.001                |  0.423        | 0.390     |
+| 200                 | 0.002                  | 0.001                |  0.823        | 0.761     |
+| 300                 | 0.002                  | 0.001                |  0.811        | 0.757     |
 
 
 ### Random Forest Classifier
@@ -129,9 +129,9 @@ Decision Trees in general perform well on classification problems when the data 
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.033                  | 0.001                |  1.0          | 0.732     |
-| 200                 | 0.028                  | 0.002                |  0.996        | 0.748     |
-| 296                 | 0.030                  | 0.003                |  0.992        | 0.768     |
+| 100                 | 0.035                  | 0.002                |  0.992        | 0.759     |
+| 200                 | 0.041                  | 0.002                |  0.996        | 0.702     |
+| 300                 | 0.041                  | 0.003                |  0.992        | 0.746     |
 
 
 
@@ -141,7 +141,7 @@ Decision Trees in general perform well on classification problems when the data 
 
 I think SVM is the best model for classifying the given data. The reasons for the same are as follows
 
-- Among the three models, one model that is not at all performing well with this data is Gaussian NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 296, it has a F1 score of .748 and so the training set is also performing not that well in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `absences`(the number of absences a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
+- Among the three models, one model that is not at all performing well with this data is Gaussian NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 300, it has a F1 score of .423 and so the training set is also performing not that well in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `absences`(the number of absences a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
 
 - Now comes the Forest Classifier and SVM. Among these models, Random Forest has an extremely high F1 score for all three sets of training data. An F1 score too high (arround 99.2% and even 100%)is a clear sign of overfitting and looks like it has not been able to generalize well over the data.
 - The time complexity of training an SVM is of the order of O(N^3) while for a Random Forest, it is O(M(mn log n) where n is the number of  instances and m is the number of attributes, and M is the number of trees. However, for this small amount of data, SVM still performs 5 times better in terms of training time. 
@@ -191,11 +191,11 @@ train_predict(reg, X_train, y_train,X_test,y_test)
 
 I have supplied different parameters of an SVM to `GridSearchCV` that searches effectively for the best combination of parameters. The best model produced from the above `GridSearchCV` is
 ```
-SVC(C=200, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape=None, degree=3, gamma=0.001, kernel='rbf',
+SVC(C=600, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.001, kernel='poly',
   max_iter=-1, probability=False, random_state=None, shrinking=True,
   tol=0.001, verbose=False)
   ```
 
 ### Model's final F1 score.
-The classifier's final F1 score for the training set came out to be 0.886836027714
+The classifier's final F1 score for the training set came out to be 0.899297423888
