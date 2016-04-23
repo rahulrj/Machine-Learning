@@ -23,8 +23,8 @@ Processed feature columns (48):-
 ['school_GP', 'school_MS', 'sex_F', 'sex_M', 'age', 'address_R', 'address_U', 'famsize_GT3', 'famsize_LE3', 'Pstatus_A', 'Pstatus_T', 'Medu', 'Fedu', 'Mjob_at_home', 'Mjob_health', 'Mjob_other', 'Mjob_services', 'Mjob_teacher', 'Fjob_at_home', 'Fjob_health', 'Fjob_other', 'Fjob_services', 'Fjob_teacher', 'reason_course', 'reason_home', 'reason_other', 'reason_reputation', 'guardian_father', 'guardian_mother', 'guardian_other', 'traveltime', 'studytime', 'failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences']
 
 ### Split data into training and test set
-Training set: 296 samples  
-Test set: 99 samples
+Training set: 300 samples  
+Test set: 95 samples
 
 
 ## 4. Training and Evaluating Models  
@@ -55,15 +55,15 @@ Let's go over them one by one
 
 
 **Why chose this model?**  
-First of all, the number of rows in the data is only 296. So as SVMs perform very well in small size datasets, that's why SVMs make a good fit here. Also, as in most real-world scenarios, the decision boundaries are not linear and SVMs have an advantage on the place where the data is randomly distributed and the decision boundary is not-linear.
+First of all, the number of rows in the data is only 300. So as SVMs perform very well in small size datasets, that's why SVMs make a good fit here. Also, as in most real-world scenarios, the decision boundaries are not linear and SVMs have an advantage on the place where the data is randomly distributed and the decision boundary is not-linear.
 
 **Measurements from SVM**
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.002                  | 0.001                |  0.846        | 0.844     |
-| 200                 | 0.004                  | 0.003                |  0.856        | 0.842     |
-| 296                 | 0.007                  | 0.007                |  0.868        | 0.842     |
+| 100                 | 0.001                  | 0.001                |  0.855        | 0.753     |
+| 200                 | 0.004                  | 0.004                |  0.842        | 0.794     |
+| 300                 | 0.007                  | 0.007                |  0.863        | 0.786     |
 
 ### Gaussian Naive Bayes  
 **Applications of SVM**
@@ -94,9 +94,9 @@ Naive Bayes classifier is always a good bet if we want something fast and easy t
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.002                  | 0.001                |  0.845        | 0.707     |
-| 200                 | 0.001                  | 0.001                |  0.756        | 0.742     |
-| 296                 | 0.001                  | 0.001                |  0.821        | 0.748     |
+| 100                 | 0.002                  | 0.001                |  0.423        | 0.390     |
+| 200                 | 0.002                  | 0.001                |  0.823        | 0.761     |
+| 300                 | 0.002                  | 0.001                |  0.811        | 0.757     |
 
 
 ### Random Forest Classifier
@@ -129,9 +129,9 @@ Decision Trees in general perform well on classification problems when the data 
 
 | Training size       | Training time (s)      | Prediction time (s)  | Training F1   | Test F1   |
 | -------------       |:-------------:         | -----:               | ------:       | ------:   |
-| 100                 | 0.033                  | 0.001                |  1.0          | 0.732     |
-| 200                 | 0.028                  | 0.002                |  0.996        | 0.748     |
-| 296                 | 0.030                  | 0.003                |  0.992        | 0.768     |
+| 100                 | 0.035                  | 0.002                |  0.992        | 0.759     |
+| 200                 | 0.041                  | 0.002                |  0.996        | 0.702     |
+| 300                 | 0.041                  | 0.003                |  0.992        | 0.746     |
 
 
 
@@ -141,7 +141,7 @@ Decision Trees in general perform well on classification problems when the data 
 
 I think SVM is the best model for classifying the given data. The reasons for the same are as follows
 
-- Among the three models, one model that is not at all performing well with this data is Gaussian NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 296, it has a F1 score of .748 and so the training set is also performing not that well in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `absences`(the number of absences a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
+- Among the three models, one model that is not at all performing well with this data is Gaussian NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 300, it has a F1 score of .423 and so the training set is also performing not that well in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `absences`(the number of absences a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
 
 - Now comes the Forest Classifier and SVM. Among these models, Random Forest has an extremely high F1 score for all three sets of training data. An F1 score too high (arround 99.2% and even 100%)is a clear sign of overfitting and looks like it has not been able to generalize well over the data.
 - The time complexity of training an SVM is of the order of O(N^3) while for a Random Forest, it is O(M(mn log n) where n is the number of  instances and m is the number of attributes, and M is the number of trees. However, for this small amount of data, SVM still performs 5 times better in terms of training time. 
@@ -153,19 +153,25 @@ So based on the limited amount of data we have(~300) and by observing the time c
 
 ### How does an SVM work?
 
-An SVM is just a simple linear separator. It separates two classes by drawing a line between them. In layman's terms, it involves finding the hyperplane (line in 2D, plane in 3D and hyperplane in higher dimensions. More formally, a hyperplane is n-1 dimensional subspace of an n-dimensional space) that best separates two classes of points with the maximum margin.
+An SVM is just a simple linear separator. It means that suppose it is given lots of data and the features of data(attributes of data), then it separates this data into different categories. For example, suppose there is an SVM which is given our data of `n` students and also its attributes like the number of absences that the student has taken, the number of free hours he has for study, his relationships with his parents , his medical condition etc. and finally whether the student has passed or not.  So, in this case, the SVM will first learn the data and classify the existing data into two groups(The two groups here are called lables, which are `YES`- whether the student  needs an intervention and `NO`- doesn't need intervention). And it does that(classifies the data) by just drawing a line between them.
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](svm_img.png)
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](svm_img.png)
 
-In the above diagram(**image credit-Quora**), there are two types of classes present represented as black and white circles. Now there are an infinite number of lines that can be drawn in the diagram to separate the black and white circles. But SVM chooses the line that maximizes the distance between two points that are closest and belong to opposite classes.In the figure, that line is the middle one.
+Since our student data has multiple attributes(31), it's not possible to represent the complete attributes in a 2-d plane. So just for understanding purpose, lets assume there is data with only 2 attributes as represented in the above diagram(**image credit-Quora**), And for that data, there are two types of classes represented as black and white circles. Now there are an infinite number of lines that can be drawn in the diagram to separate the black and white circles. But SVM chooses the line that maximizes the distance between two points that are closest and belong to opposite classes.In the figure, that line is the middle one. Here,maximizing the data between closest points of opposite classes is very important, because with this,it tries to adjust maximum number of points into the respective classes.
 
-The closest points of which it is trying to maximize the distance are called as  the "support vectors" (the name "support vector machine" is due to the fact that points are like vectors and that the best line "depends on" or is "supported by" the closest points).In the above diagram,the points from which the lines `wx-b=1` and `wx-b=-1` passes are support vectors.The connecting lines between the closest points is drawn by doing vector subtraction (point A - point B,where A and B are support vectors). Now the best separating line is the line that bisects and is perpendicular to the connecting line.
+Now for 2-d data, it is a process of finding a separating line, while for 3-d data, it actually becomes a plane which separates the data. Similarly, for higher dimensions, it becomes finding a hyperplane(hyperplane is n-1 dimensional subspace of an n-dimensional space) that best separates two classes of points with the maximum margin.
 
-Now, when there is no clear linear separation between the data as in the below image(**credit-CS Utah slides**), then we have to adopt a method known as Kernel Trick. So in the left image each point is defined by two features `(x1,x2)`. Now we map each point `(x1,x2)` as `Z=(x1^2,sqrt(2)x1*x2,x2^2)`. If we map each point using the newly created three features, the data becomes linearly separable as shown in the right image.
+Once the maximum separating hyperplane has been drawn for the student data, now suppose the SVM is given a new student data with all its attributes. Now the SVM has to place the data on the appropriate side of the separating hyperplane based on its attributes to classify it.
+
+The closest points of which it is trying to maximize the distance are called as  the "support vectors" .In the above diagram,the points from which the two dashed lines are passing are support vectors(lets call them A and B). Then the connecting lines between those  closest points(A and B) is drawn . Now the best separating line is the line that bisects and is perpendicular to the connecting line.
+
+Sometimes, there is no clear linear separation between the data as in the below image(**credit-CS Utah slides**). In the left image below, we cannot draw a line to separate the blue and red circles. So we adopt a method known as Kernel Trick. In Kernel trick , we introcuce a new dimension in the data  and then plot the points based on all three dimensions. Now as we can see in the right image, the blue and red circles are separable by drawing a plane between them. This plane is equivalent to drawing a circle between the two classes( the dashed circle in the left image).
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](non_linear_svm.png)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;![](non_linear_svm_kt.png)
 
 The job of classifying the data into different data sets is given to the Kernel Function. It is the Kernel function that takes into input two data points and emits out the similarity between those points. Two common kernels used in SVMs are Linear kernels and Radial Basis Function(RBF) kernel.
+
+
 
 ### Fine tuning of the classifier
 ```
@@ -191,11 +197,11 @@ train_predict(reg, X_train, y_train,X_test,y_test)
 
 I have supplied different parameters of an SVM to `GridSearchCV` that searches effectively for the best combination of parameters. The best model produced from the above `GridSearchCV` is
 ```
-SVC(C=200, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape=None, degree=3, gamma=0.001, kernel='rbf',
+SVC(C=600, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.001, kernel='poly',
   max_iter=-1, probability=False, random_state=None, shrinking=True,
   tol=0.001, verbose=False)
   ```
 
 ### Model's final F1 score.
-The classifier's final F1 score for the training set came out to be 0.886836027714
+The classifier's final F1 score for the training set came out to be 0.899297423888
