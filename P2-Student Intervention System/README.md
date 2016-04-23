@@ -31,17 +31,17 @@ Test set: 95 samples
 I choose the following three supervised learning models for this dataset  
 1. Support Vector Machines  
 2. Gaussian Naive Bayes  
-3. Random Forest Classifier 
+3. Random Forest Classifier
 
 Let's go over them one by one
 
 ### Support Vector Machines
 **Applications of SVM**
 - It has been used in personalized and centered learning. There are a large number of AI techniques to tailor the content to the learner depending on his context.SVMs stand out due to their better performance specially in handling large dimensions which text content do possess.
-- Clustering is an important task for image compression. This clustering can be done by an SVM efficiently. 
+- Clustering is an important task for image compression. This clustering can be done by an SVM efficiently.
 - SVM has been used  to classify different land covers using remote sensing data. Results have also suggested  that Multi-class SVMs perform well in comparison with neural network and decision tree classifiers.
 - SVMs have also been used in handwritten digit recognition.
- 
+
 **Advantages of SVM**
 - SVMs do a great job in formulating non-linear decision boundaries. Other supervised learning methods like Decision Trees and Logistic regression won't give optimized results when the data is randomly distributed and there is no clear linear separation between them.
 -  By introducing the kernel, SVMs gain flexibility in the choice of the form of the threshold separating the different types of data. We can also write our custom kernels to specify the similarity between the data. This feature of writing custom kernels makes it very versatile.
@@ -70,7 +70,7 @@ First of all, the number of rows in the data is only 300. So as SVMs perform ver
 - A major use of Naive Bayes is in Document Classification.It remains a popular (baseline) method for text categorization.
 - Another common application is Spam filtering i.e making incoming emails as spam based on the contents of the mail.
 - It also finds application in automatic medical diagnosis i.e calculating the probability that a person has a disease or not.
-- It's used in credit approval systems where we determine whether a person should be issued a credit card on not based on the attributes(household income, education etc) of that person. 
+- It's used in credit approval systems where we determine whether a person should be issued a credit card on not based on the attributes(household income, education etc) of that person.
 - It's used in building Recommender system that predicts whether the user will like a given resource. It has countless uses in the social networks like Facebook and other sites like Netflix and Airbnb.
 
 
@@ -86,7 +86,7 @@ First of all, the number of rows in the data is only 300. So as SVMs perform ver
 
 
 
-**Why chose this model?** 
+**Why chose this model?**
 Naive Bayes classifier is always a good bet if we want something fast and easy that performs pretty well. Also it will perform better if the assumption of conditional independence actually holds true between the attributes. In the given data, as i can see that there is a little dependence between attributes like `health` and `absences` etc.So there can be a slight dip in its performance. But overall,it will perform pretty well.
 
 
@@ -135,7 +135,7 @@ Decision Trees in general perform well on classification problems when the data 
 
 
 
-## 5. Choosing the best model 
+## 5. Choosing the best model
 
 ### Which is the best model?
 
@@ -144,7 +144,7 @@ I think SVM is the best model for classifying the given data. The reasons for th
 - Among the three models, one model that is not at all performing well with this data is Gaussian NB classifier. Its F1 score for both the training and testing sets specially is quite low compared to the other two classifiers.For training size of 300, it has a F1 score of .423 and so the training set is also performing not that well in this case. Naive Bayes performs poorly i think because of the over simplified assumptions it makes. It never takes into consideration the effect of two attributes combined in the probability calculations. For example, in the data, the attributes `health` and `absences` are not independent of each other. Actually the attribute `absences`(the number of absences a student has taken) is dependent on the attribute `health`(health of the student) and both of these can affect the result collectively. Again the attributes `traveltime`(time taken to travel to and from from school) is not independent of `studytime` ( the weekly time available for study). Also Naive Bayes doesn't accept any parameters in its function which can be tuned to improve its F1 score.
 
 - Now comes the Forest Classifier and SVM. Among these models, Random Forest has an extremely high F1 score for all three sets of training data. An F1 score too high (arround 99.2% and even 100%)is a clear sign of overfitting and looks like it has not been able to generalize well over the data.
-- The time complexity of training an SVM is of the order of O(N^3) while for a Random Forest, it is O(M(mn log n) where n is the number of  instances and m is the number of attributes, and M is the number of trees. However, for this small amount of data, SVM still performs 5 times better in terms of training time. 
+- The time complexity of training an SVM is of the order of O(N^3) while for a Random Forest, it is O(M(mn log n) where n is the number of  instances and m is the number of attributes, and M is the number of trees. However, for this small amount of data, SVM still performs 5 times better in terms of training time.
 
 - Although the prediction time of training set in case of Random Forest is comparatively less than that of SVM, but in case of prediction time of test sets, its almost equal for both of them (0.002 s).
 
@@ -165,7 +165,7 @@ Once the maximum separating hyperplane has been drawn for the student data, now 
 
 The closest points of which it is trying to maximize the distance are called as  the "support vectors" .In the above diagram,the points from which the two dashed lines are passing are support vectors(lets call them A and B). Then the connecting lines between those  closest points(A and B) is drawn . Now the best separating line is the line that bisects and is perpendicular to the connecting line.
 
-Sometimes, there is no clear linear separation between the data as in the below image(**credit-CS Utah slides**). In the left image below, we cannot draw a line to separate the blue and red circles. So we adopt a method known as Kernel Trick. In Kernel trick , we introcuce a new dimension in the data  and then plot the points based on all three dimensions. Now as we can see in the right image, the blue and red circles are separable by drawing a plane between them. This plane is equivalent to drawing a circle between the two classes( the dashed circle in the left image).
+Sometimes, there is no clear linear separation between the data as in the below image(**credit-CS Utah slides**). In the left image below, we cannot draw a line to separate the blue and red circles. So we adopt a method known as Kernel Trick. In Kernel trick , we introduce a new dimension in the data  and then plot the points based on all three dimensions. Now as we can see in the right image, the blue and red circles are separable by drawing a plane between them. This plane is equivalent to drawing a circle between the two classes( the dashed circle in the left image).
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](non_linear_svm.png)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;![](non_linear_svm_kt.png)
 
