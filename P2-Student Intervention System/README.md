@@ -153,13 +153,15 @@ So based on the limited amount of data we have(~300) and by observing the time c
 
 ### How does an SVM work?
 
-An SVM is just a simple linear separator. It means that suppose it is given lots of data and the features of data(attributes of data), then it classifies this data into different categories. For example, suppose there is an SVM which is given our data of `n` students and also its attributes like the number of absences that the student has taken, the number of free hours he has for study, his relationships with his parents , his medical condition etc. and finally whether the student has passed or not.  So, in this case, the SVM will first classify the existing data into two groups(The two groups here are called lables, which are `YES`- whether the student  needs an intervention and `NO`- doesn't need intervention). And it does that(separates the data) by just drawing a line between them.
+An SVM is just a simple linear separator. It means that suppose it is given lots of data and the features of data(attributes of data), then it classifies this data into different categories. For example, suppose there is an SVM which is given our data of `n` students and also its attributes like the number of absences that the student has taken, the number of free hours he has for study, his relationships with his parents , his medical condition etc. and finally whether the student has passed or not.  So, in this case, the SVM will first learn the data and classify the existing data into two groups(The two groups here are called lables, which are `YES`- whether the student  needs an intervention and `NO`- doesn't need intervention). And it does that(separates the data) by just drawing a line between them.
 
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](svm_img.png)
 
 Since our student data has multiple attributes(31), it's not possible to represent the complete attributes in a 2-d plane. So just for understanding purpose, lets assume there is data with only 2 attributes as represented in the above diagram(**image credit-Quora**), And for that data, there are two types of classes represented as black and white circles. Now there are an infinite number of lines that can be drawn in the diagram to separate the black and white circles. But SVM chooses the line that maximizes the distance between two points that are closest and belong to opposite classes.In the figure, that line is the middle one. Here,maximizing the data between closest points of opposite classes is very important, because with this,it tries to adjust maximum number of points into the respective classes.
 
-Now for 2-d data, it is a process of finding a separating line, while for 3-d data, it actually becomes a plane which separates the data. Similarly, for higher dimensions, it becomes finding a hyperplane(hyperplane is n-1 dimensional subspace of an n-dimensional space) that best separates two classes of points with the maximum margin..
+Now for 2-d data, it is a process of finding a separating line, while for 3-d data, it actually becomes a plane which separates the data. Similarly, for higher dimensions, it becomes finding a hyperplane(hyperplane is n-1 dimensional subspace of an n-dimensional space) that best separates two classes of points with the maximum margin.
+
+Once the maximum separating hyperplane has been drawn for the student data, now suppose the SVM is given a new student data with all its attributes. Now the SVM has to place the data on the appropriate side of the separating hyperplane based on its attributes to classify it.
 
 The closest points of which it is trying to maximize the distance are called as  the "support vectors" .In the above diagram,the points from which the two dashed lines are passing are support vectors(lets call them A and B). Then the connecting lines between those  closest points(A and B) is drawn . Now the best separating line is the line that bisects and is perpendicular to the connecting line.
 
@@ -168,6 +170,8 @@ Sometimes, there is no clear linear separation between the data as in the below 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;![](non_linear_svm.png)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;![](non_linear_svm_kt.png)
 
 The job of classifying the data into different data sets is given to the Kernel Function. It is the Kernel function that takes into input two data points and emits out the similarity between those points. Two common kernels used in SVMs are Linear kernels and Radial Basis Function(RBF) kernel.
+
+
 
 ### Fine tuning of the classifier
 ```
