@@ -178,17 +178,19 @@ The job of classifying the data into different data sets is given to the Kernel 
 # TODO: Fine-tune your model and report the best F1 score
 from sklearn import grid_search
 from sklearn.metrics import f1_score
+from sklearn.metrics import make_scorer
 
 clf = svm.SVC()
 param_grid = [
-  {'C': [1, 10, 50, 100, 200, 250, 300, 350, 400, 500, 600],
-   'kernel':['rbf','poly','sigmoid'],
-   'gamma': [1,0.1,0.01,0.001,0.0001,0.00001,0.000001,0.0000001],
-    'tol':[0.01,0.001,0.0001,0.00001,0.0000001]
+  {'C': [1,10, 50, 100, 200, 250, 300, 350, 400, 500, 600],
+    'kernel':['rbf','poly','sigmoid'],
+    'gamma': [0.001,0.01,0.1,1,0.1,0.01,0.001,0.0001,0.00001],
+     'tol':[0.01,0.001,0.0001,0.00001,0.0000001]
   }
  ]
 
-regressor = grid_search.GridSearchCV(clf, param_grid, cv=5,scoring='f1_weighted')
+f1_scorer = make_scorer(f1_score, pos_label="yes")
+regressor = grid_search.GridSearchCV(clf, param_grid, cv=5,scoring=f1_scorer)
 regressor.fit(X_train, y_train)
 reg = regressor.best_estimator_
 print reg
