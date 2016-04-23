@@ -8,7 +8,7 @@ It would have been an example of regression if we had to find some continuous va
 Total number of students: 395  
 Number of students who passed: 265  
 Number of students who failed: 130  
-Number of features: 31  
+Number of features: 30  
 Graduation rate of the class: 67.09%  
 
 ## 3. Preparing the Data
@@ -197,11 +197,11 @@ train_predict(reg, X_train, y_train,X_test,y_test)
 
 I have supplied different parameters of an SVM to `GridSearchCV` that searches effectively for the best combination of parameters. The best model produced from the above `GridSearchCV` is
 ```
-SVC(C=600, cache_size=200, class_weight=None, coef0=0.0,
-  decision_function_shape=None, degree=3, gamma=0.001, kernel='poly',
+SVC(C=1, cache_size=200, class_weight=None, coef0=0.0,
+  decision_function_shape=None, degree=3, gamma=0.1, kernel='rbf',
   max_iter=-1, probability=False, random_state=None, shrinking=True,
-  tol=0.001, verbose=False)
+  tol=0.01, verbose=False)
   ```
 
 ### Model's final F1 score.
-The classifier's final F1 score for the training set came out to be 0.899297423888
+The classifier's final F1 score for the training set came out to be 0.978102189781
